@@ -1,0 +1,2 @@
+# Dependencies 
+Always use the appropriate package manager to manage dependencies. Never simply edit the manifest. This ensures we get the latest release version. It facilitates dependency configuration, e.g. enabling features and ensures correct manifest syntax.

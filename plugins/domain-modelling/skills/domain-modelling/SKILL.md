@@ -1,6 +1,11 @@
+---
+name: domain-modelling
+description: Shape the contents of the domain core — ubiquitous language, aggregates as consistency boundaries, entities versus value objects, making illegal states unrepresentable, where behaviour lives, persistence ignorance, events versus effects, and bounded contexts. Use when modelling a business concept, designing domain types or an aggregate, choosing between an optional field and a variant, naming a domain concept, or reviewing a domain model.
+---
+
 # Domain modelling
 
-What goes inside the core, and what shape it takes. [layering.md](./layering.md) is the structure; this is the content.
+What goes inside the core, and what shape it takes. The **layering** practice (`layering@blessed-practices`) is the structure; this is the content.
 
 ## The language is the model
 

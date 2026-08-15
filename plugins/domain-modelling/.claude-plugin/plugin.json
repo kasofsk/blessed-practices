@@ -1,0 +1,4 @@
+{
+  "name": "domain-modelling",
+  "description": "What goes inside the core \u2014 ubiquitous language, aggregates as consistency boundaries, entities and values, illegal states unrepresentable, where behaviour lives, persistence ignorance, events versus effects, bounded contexts"
+}

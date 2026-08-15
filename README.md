@@ -1,9 +1,53 @@
 # blessed-practices
 
-Blessed code practices
+Blessed code practices, published as a [Claude Code](https://docs.claude.com/en/docs/claude-code) plugin marketplace.
 
-## general/
+Each practice is its own plugin containing a single skill, so you can install
+exactly the ones you want. Claude loads a practice when the work in front of it
+matches the skill's description — no need to invoke them by hand.
 
-- [dependencies.md](./general/dependencies.md) — use the package manager; never hand-edit the manifest.
-- [layering.md](./general/layering.md) — which way dependencies point, what each layer owns, what may cross a boundary, ports and adapters.
-- [domain-modelling.md](./general/domain-modelling.md) — the language, aggregates as consistency boundaries, entities and values, illegal states, where behaviour lives, persistence.
+## Install
+
+```
+/plugin marketplace add kasofsk/blessed-practices
+/plugin install layering@blessed-practices
+```
+
+Then browse and install the rest from the `/plugin` menu, or install by name:
+
+```
+/plugin install domain-modelling@blessed-practices
+```
+
+## Practices
+
+### general
+
+| Plugin | Skill | Practice |
+|--------|-------|----------|
+| [comments-describe-the-code](plugins/comments-describe-the-code) | `comments-describe-the-code:comments-describe-the-code` | Comments describe the code itself, not the prompt or conversation that produced it — and a long justifying comment is a smell pointing at the code. |
+| [dependencies](plugins/dependencies) | `dependencies:dependencies` | Use the package manager; never hand-edit the manifest. |
+| [domain-modelling](plugins/domain-modelling) | `domain-modelling:domain-modelling` | The language, aggregates as consistency boundaries, entities and values, illegal states, where behaviour lives, persistence. |
+| [fix-the-assumption-not-the-hack](plugins/fix-the-assumption-not-the-hack) | `fix-the-assumption-not-the-hack:fix-the-assumption-not-the-hack` | When a feature invalidates an assumption the design rests on, rethink the pattern rather than land a tweak. |
+| [idiomatic-by-default](plugins/idiomatic-by-default) | `idiomatic-by-default:idiomatic-by-default` | Take the ecosystem's standard path unless there's an articulable reason not to. |
+| [layering](plugins/layering) | `layering:layering` | Which way dependencies point, what each layer owns, what may cross a boundary, ports and adapters. |
+| [modular-and-layered-code](plugins/modular-and-layered-code) | `modular-and-layered-code:modular-and-layered-code` | Architect so a future agent can act at a single layer — strict tested contracts, pure logic, impurity at the edges. |
+| [push-back-and-verify-assumptions](plugins/push-back-and-verify-assumptions) | `push-back-and-verify-assumptions:push-back-and-verify-assumptions` | Push back on wrong premises, state assumptions explicitly, and stop rather than build something plausibly correct. |
+
+`layering` and `domain-modelling` are a pair — the first is the structure, the
+second is the content — but each stands alone.
+
+## Reading the practices without installing
+
+Every practice is a plain Markdown file at
+`plugins/<name>/skills/<name>/SKILL.md`. The YAML frontmatter tells Claude when
+to load it; the body is the practice.
+
+## Contributing
+
+See [CLAUDE.md](./CLAUDE.md) for the repo layout, the versioning rule that gates
+client updates, and how to add a practice.
+
+## License
+
+[MIT](./LICENSE)

@@ -1,0 +1,57 @@
+{
+  "name": "blessed-practices",
+  "description": "Blessed code practices, one installable skill per practice — layering, domain modelling, dependency hygiene, comment discipline, and how an agent should push back",
+  "owner": {
+    "name": "kasofsk"
+  },
+  "plugins": [
+    {
+      "name": "comments-describe-the-code",
+      "source": "./plugins/comments-describe-the-code",
+      "version": "1.0.0",
+      "description": "Comments describe the code itself, not the prompt or conversation that produced it — and a long justifying comment is a code smell pointing at the code"
+    },
+    {
+      "name": "dependencies",
+      "source": "./plugins/dependencies",
+      "version": "1.0.0",
+      "description": "Manage dependencies with the ecosystem's package manager; never hand-edit the manifest"
+    },
+    {
+      "name": "domain-modelling",
+      "source": "./plugins/domain-modelling",
+      "version": "1.0.0",
+      "description": "What goes inside the core — ubiquitous language, aggregates as consistency boundaries, entities and values, illegal states unrepresentable, where behaviour lives, persistence ignorance, events versus effects, bounded contexts"
+    },
+    {
+      "name": "fix-the-assumption-not-the-hack",
+      "source": "./plugins/fix-the-assumption-not-the-hack",
+      "version": "1.0.0",
+      "description": "When a feature invalidates an assumption the design rests on, rethink the pattern instead of landing a tweaky hack"
+    },
+    {
+      "name": "idiomatic-by-default",
+      "source": "./plugins/idiomatic-by-default",
+      "version": "1.0.0",
+      "description": "Take the ecosystem's standard path unless there is an articulable reason not to, and don't escalate decisions an idiom already answers"
+    },
+    {
+      "name": "layering",
+      "source": "./plugins/layering",
+      "version": "1.0.0",
+      "description": "Where code goes and which way its dependencies point — inward-pointing dependencies, what each layer owns, what may cross a boundary, ports and adapters"
+    },
+    {
+      "name": "modular-and-layered-code",
+      "source": "./plugins/modular-and-layered-code",
+      "version": "1.0.0",
+      "description": "Architect so a future agent can act at a single layer — strict tested contracts, boundary-focused testing, pure logic separated from I/O, impurity confined to the edges"
+    },
+    {
+      "name": "push-back-and-verify-assumptions",
+      "source": "./plugins/push-back-and-verify-assumptions",
+      "version": "1.0.0",
+      "description": "Treat the operator as a fellow engineer — push back on wrong premises, state assumptions explicitly, and stop rather than build something plausibly correct"
+    }
+  ]
+}

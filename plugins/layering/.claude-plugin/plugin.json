@@ -1,0 +1,4 @@
+{
+  "name": "layering",
+  "description": "Where code goes and which way its dependencies point \u2014 inward-pointing dependencies, what each layer owns, what may cross a boundary, ports and adapters"
+}

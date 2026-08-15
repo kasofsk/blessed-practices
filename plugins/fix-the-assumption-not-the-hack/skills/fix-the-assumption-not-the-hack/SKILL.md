@@ -1,3 +1,8 @@
+---
+name: fix-the-assumption-not-the-hack
+description: When a new feature invalidates an assumption the current design rests on, rethink the pattern rather than land a tweak that technically satisfies the request. Use when a change does not fit the existing design, when a workaround needs a long comment to justify itself, when weighing a quick patch against a small refactor, or when noticing an architectural improvement while making an unrelated change.
+---
+
 # Fix the Assumption, Not the Hack
 
 ## Core principle
@@ -17,9 +22,8 @@ situation will arise many, many times: a feature wants to be added, and the
 agent is presented with two options —
 
 - **The hack**: a tweak that gets exactly to where the request was, typically
-  needing a long comment to explain and justify itself (see
-  [Comments Describe the Code](comments-describe-the-code.md) — that comment
-  is the tell).
+  needing a long comment to explain and justify itself (see the
+  **comments-describe-the-code** practice — that comment is the tell).
 - **The rethink**: a slightly more expensive change that revisits the pattern,
   because this new feature has invalidated an assumption the old pattern
   rested on.

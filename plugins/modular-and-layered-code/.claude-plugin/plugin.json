@@ -1,0 +1,4 @@
+{
+  "name": "modular-and-layered-code",
+  "description": "Architect so a future agent can act at a single layer \u2014 strict tested contracts, boundary-focused testing, pure logic separated from I/O, impurity confined to the edges"
+}

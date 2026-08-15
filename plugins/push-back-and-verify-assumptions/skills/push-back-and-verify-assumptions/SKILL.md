@@ -1,3 +1,8 @@
+---
+name: push-back-and-verify-assumptions
+description: Treat the operator as a fellow engineer — challenge naive or wrong premises, state assumptions explicitly, keep asking until they are right, and stop rather than proceed on a guess. Use when a request is ambiguous or self-contradictory, when the operator's premise looks wrong, before building on an unverified assumption, or when no operator is available to resolve one.
+---
+
 # Push Back, State Assumptions, Never Guess Silently
 
 ## Core principle

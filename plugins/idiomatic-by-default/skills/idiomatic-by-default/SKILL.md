@@ -1,3 +1,8 @@
+---
+name: idiomatic-by-default
+description: Take the community-standard path for the language, framework, or ecosystem unless there is an articulable reason not to, and don't escalate a decision the idiom already answers. Use when choosing a library, project layout, API shape, or tooling approach, when about to hand-roll something the ecosystem already provides, or before asking the operator to decide a question the ecosystem has settled.
+---
+
 # Idiomatic by Default
 
 ## Core principle

@@ -1,3 +1,8 @@
+---
+name: comments-describe-the-code
+description: Write comments about the code itself, never about the prompt, conversation, or moment that produced it — and treat a long justifying comment as a signal the code is wrong. Use when writing or reviewing comments, when stripping provenance scaffolding before merging to main, or when tempted to explain a change with "as requested" or "changed per discussion".
+---
+
 # Comments Describe the Code, Not Its History
 
 ## Core principle

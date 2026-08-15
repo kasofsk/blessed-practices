@@ -1,3 +1,8 @@
+---
+name: modular-and-layered-code
+description: Architect so a future agent can act at a single layer — strict tested contracts between layers, testing concentrated at domain boundaries, pure logic kept free of I/O, and impurity confined to the edges. Use when designing module boundaries or abstractions, deciding where to concentrate test effort, extracting side effects out of logic, or judging whether an abstraction is worth building before it is needed.
+---
+
 # Modular and Layered Code
 
 ## Core principle

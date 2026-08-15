@@ -1,3 +1,8 @@
+---
+name: layering
+description: Decide where code goes and which way its dependencies point — inward-pointing source dependencies, what the domain, application, adapter and infrastructure layers each own, what may cross a boundary, and ports and adapters. Use when structuring a codebase or module, adding a layer or port, deciding which layer a piece of logic belongs in, reviewing a change that crosses a boundary, or diagnosing over- and under-layering.
+---
+
 # Layering
 
 Where code goes, and which way its dependencies point.

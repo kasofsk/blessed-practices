@@ -1,12 +1,18 @@
 # blessed-practices
 
-Blessed code practices, published as a [Claude Code](https://docs.claude.com/en/docs/claude-code) plugin marketplace.
+Blessed code practices stored as portable Agent Skills and published through
+thin client-specific packaging.
 
-Each practice is its own plugin containing a single skill, so you can install
+Each canonical practice is a plain Markdown file at
+`skills/<name>/SKILL.md`. Its YAML frontmatter provides the portable name and
+load trigger; its body is the practice. Claude Code packages are generated from
+those files and must never be edited directly.
+
+Each practice is its own Claude plugin containing a single skill, so you can install
 exactly the ones you want. Claude loads a practice when the work in front of it
 matches the skill's description — no need to invoke them by hand.
 
-## Install
+## Install in Claude Code
 
 ```
 /plugin marketplace add kasofsk/blessed-practices
@@ -18,6 +24,19 @@ Then browse and install the rest from the `/plugin` menu, or install by name:
 ```
 /plugin install domain-modelling@blessed-practices
 ```
+
+## Install in Codex
+
+Ask Codex to install one or more canonical skill paths from this repository.
+For example:
+
+```text
+Install skills/layering and skills/domain-modelling from
+https://github.com/kasofsk/blessed-practices
+```
+
+Codex discovers the installed practices from their ordinary `SKILL.md`
+frontmatter. No Codex-specific copy of the practice is required.
 
 ## Practices
 
@@ -40,8 +59,14 @@ second is the content — but each stands alone.
 ## Reading the practices without installing
 
 Every practice is a plain Markdown file at
-`plugins/<name>/skills/<name>/SKILL.md`. The YAML frontmatter tells Claude when
-to load it; the body is the practice.
+`skills/<name>/SKILL.md`. The YAML frontmatter tells a compatible agent when to
+load it; the body is the practice.
+
+## Packaging
+
+Run `scripts/package_claude_plugins.py` after changing a canonical skill, then
+run `scripts/validate.py`. Validation proves the published Claude copies have
+not drifted and the canonical skill set matches the marketplace.
 
 ## Contributing
 

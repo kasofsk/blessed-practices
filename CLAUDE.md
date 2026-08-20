@@ -4,27 +4,32 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A **Claude Code plugin marketplace** publishing one coding practice per plugin.
-The repo is the marketplace `blessed-practices`; each subdirectory of `plugins/`
-is one plugin containing exactly one skill. The point of the one-practice-per-plugin
-split is that a user installs only the practices they want.
+An **agent-agnostic practice library** published as a Claude Code plugin
+marketplace and directly installable as Agent Skills. The repo is the
+marketplace `blessed-practices`; each subdirectory of `plugins/` is a generated
+Claude wrapper containing exactly one canonical practice. The point of the
+one-practice-per-plugin split is that a user installs only the practices they
+want.
 
 ## Layout
 
 ```
+skills/<practice>/SKILL.md                 # canonical portable practice
 .claude-plugin/marketplace.json          # the catalog: one entry per published practice
 plugins/<practice>/
   .claude-plugin/plugin.json             # { name, description } — no version field, see Versioning
-  skills/<practice>/SKILL.md             # the practice itself, with YAML frontmatter
+  skills/<practice>/SKILL.md             # generated Claude package; do not edit
+scripts/package_claude_plugins.py         # canonical skill -> Claude package
 README.md                                # human-facing practice table (keep in sync with the catalog)
 ```
 
 The plugin name, the skill directory name, and the frontmatter `name` are all the
 same slug, so the skill surfaces as `<practice>:<practice>`.
 
-**`SKILL.md` is the practice.** There is no separate prose copy and no build step —
-the Markdown file is both the published skill and the document people read on
-GitHub. Never introduce a second copy of a practice.
+**The top-level `SKILL.md` is the practice.** The plugin copy is generated
+packaging, never another maintained source. Edit only
+`skills/<practice>/SKILL.md` and run `scripts/package_claude_plugins.py`. Check
+mode must pass before commit.
 
 ## The frontmatter is the load trigger
 
@@ -52,20 +57,23 @@ version and clients keep the old text forever.
 
 ### Edit an existing practice
 
-1. Edit `plugins/<practice>/skills/<practice>/SKILL.md`.
-2. **Bump that plugin's `version`** in `.claude-plugin/marketplace.json`.
-3. If the practice's scope changed, update the catalog `description`, the
+1. Edit `skills/<practice>/SKILL.md`.
+2. Run `scripts/package_claude_plugins.py`.
+3. **Bump that plugin's `version`** in `.claude-plugin/marketplace.json`.
+4. If the practice's scope changed, update the catalog `description`, the
    `plugin.json` `description`, and the README row together.
-4. Validate: `python3 -m json.tool .claude-plugin/marketplace.json >/dev/null`.
+5. Validate: `scripts/validate.py` and
+   `python3 -m json.tool .claude-plugin/marketplace.json >/dev/null`.
 
 ### Add a new practice
 
-1. `plugins/<slug>/skills/<slug>/SKILL.md` with `name` and `description` frontmatter.
+1. `skills/<slug>/SKILL.md` with `name` and `description` frontmatter.
 2. `plugins/<slug>/.claude-plugin/plugin.json` — `{ "name": "<slug>", "description": "…" }`.
-3. **Register it** in `.claude-plugin/marketplace.json` with `name`, `source`
+3. Run `scripts/package_claude_plugins.py` to create the packaged skill.
+4. **Register it** in `.claude-plugin/marketplace.json` with `name`, `source`
    (`"./plugins/<slug>"`), `version` (`1.0.0`), and `description`. A plugin absent
    from the catalog is not published — clients cannot see it.
-4. Add a row to the README table under the right category heading.
+5. Add a row to the README table under the right category heading.
 
 Categories (`general`, and any added later) are **README headings only**, not a
 directory level. `plugins/` stays flat, and plugin names must be unique across the
@@ -97,5 +105,6 @@ Commit on a branch (never straight to `main`), push, open a PR. After merge:
 
 - **Keep three things in sync** on every change: `SKILL.md`, the `marketplace.json`
   entry (version + description), and the README table.
+- Never edit a packaged `plugins/*/skills/*/SKILL.md`; regenerate it.
 - Practices are written as prose that states a rule and its cost, not as checklists.
 - Branch for changes; finish commit messages with the project's `Co-Authored-By` trailer.

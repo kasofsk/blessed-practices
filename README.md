@@ -53,6 +53,7 @@ frontmatter. No Codex-specific copy of the practice is required.
 | [layering](skills/layering) | `layering:layering` | Which way dependencies point, what each layer owns, what may cross a boundary, ports and adapters. |
 | [modular-and-layered-code](skills/modular-and-layered-code) | `modular-and-layered-code:modular-and-layered-code` | Architect so a future agent can act at a single layer — strict tested contracts, pure logic, impurity at the edges. |
 | [push-back-and-verify-assumptions](skills/push-back-and-verify-assumptions) | `push-back-and-verify-assumptions:push-back-and-verify-assumptions` | Push back on wrong premises, state assumptions explicitly, and stop rather than build something plausibly correct. |
+| [write-the-present-not-the-diff](skills/write-the-present-not-the-diff) | `write-the-present-not-the-diff:write-the-present-not-the-diff` | Say what is true now; don't narrate the correction or apologize for the claim it replaced. |
 
 `layering` and `domain-modelling` are a pair — the first is the structure, the
 second is the content — but each stands alone.

@@ -76,6 +76,15 @@
       "skills": [
         "./skills/push-back-and-verify-assumptions"
       ]
+    },
+    {
+      "name": "write-the-present-not-the-diff",
+      "source": "./",
+      "version": "1.0.0",
+      "description": "Prose states what is true now — not the claim it replaced, the measurement that disproved it, or the path that got there",
+      "skills": [
+        "./skills/write-the-present-not-the-diff"
+      ]
     }
   ]
 }

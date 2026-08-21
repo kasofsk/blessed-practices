@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Validate canonical skills, Claude packages, and marketplace registration."""
+"""Validate canonical skills against their marketplace registration."""
 
 from __future__ import annotations
 
 import json
-import subprocess
 from pathlib import Path
 
 
@@ -47,11 +46,21 @@ def main() -> int:
             f"canonical skills {sorted(canonical)} do not match marketplace {sorted(published)}"
         )
 
-    packaged = subprocess.run(
-        [str(ROOT / "scripts/package_claude_plugins.py"), "--check"],
-        check=False,
-    )
-    return packaged.returncode
+    for plugin in marketplace["plugins"]:
+        name = plugin["name"]
+        if plugin.get("source") != "./":
+            raise ValueError(f"{name}: source must be './' so the entry serves the canonical skill")
+        if not plugin.get("version"):
+            raise ValueError(f"{name}: version gates client updates and must be set")
+        if not plugin.get("description"):
+            raise ValueError(f"{name}: description must not be empty")
+        if plugin.get("skills") != [f"./skills/{name}"]:
+            raise ValueError(f"{name}: skills must be ['./skills/{name}']")
+        if not (ROOT / "skills" / name / "SKILL.md").is_file():
+            raise ValueError(f"{name}: skills/{name}/SKILL.md does not exist")
+
+    print(f"validated {len(canonical)} practices")
+    return 0
 
 
 if __name__ == "__main__":

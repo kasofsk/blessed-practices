@@ -1,4 +1,0 @@
-{
-  "name": "dependencies",
-  "description": "Manage dependencies with the ecosystem's package manager; never hand-edit the manifest"
-}

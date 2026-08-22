@@ -45,20 +45,12 @@ frontmatter. No Codex-specific copy of the practice is required.
 
 | Plugin | Skill | Practice |
 |--------|-------|----------|
-| [comments-describe-the-code](plugins/comments-describe-the-code) | `comments-describe-the-code:comments-describe-the-code` | Comments describe the code itself, not the prompt or conversation that produced it — and a long justifying comment is a smell pointing at the code. |
-| [dependencies](plugins/dependencies) | `dependencies:dependencies` | Use the package manager; never hand-edit the manifest. |
-| [domain-modelling](plugins/domain-modelling) | `domain-modelling:domain-modelling` | The language, aggregates as consistency boundaries, entities and values, illegal states, where behaviour lives, persistence. |
-| [fix-the-assumption-not-the-hack](plugins/fix-the-assumption-not-the-hack) | `fix-the-assumption-not-the-hack:fix-the-assumption-not-the-hack` | When a feature invalidates an assumption the design rests on, rethink the pattern rather than land a tweak. |
-| [idiomatic-by-default](plugins/idiomatic-by-default) | `idiomatic-by-default:idiomatic-by-default` | Take the ecosystem's standard path unless there's an articulable reason not to. |
-| [illegal-states-unrepresentable](plugins/illegal-states-unrepresentable) | `illegal-states-unrepresentable:illegal-states-unrepresentable` | Model data so invalid combinations cannot be constructed; parse loose external shapes into precise variants at the boundary. |
-| [layering](plugins/layering) | `layering:layering` | Which way dependencies point, what each layer owns, what may cross a boundary, ports and adapters. |
-| [modular-and-layered-code](plugins/modular-and-layered-code) | `modular-and-layered-code:modular-and-layered-code` | Architect so a future agent can act at a single layer — strict tested contracts, pure logic, impurity at the edges. |
-| [push-back-and-verify-assumptions](plugins/push-back-and-verify-assumptions) | `push-back-and-verify-assumptions:push-back-and-verify-assumptions` | Push back on wrong premises, state assumptions explicitly, and stop rather than build something plausibly correct. |
 | [comments-describe-the-code](skills/comments-describe-the-code) | `comments-describe-the-code:comments-describe-the-code` | Comments describe the code itself, not the prompt or conversation that produced it — and a long justifying comment is a smell pointing at the code. |
 | [dependencies](skills/dependencies) | `dependencies:dependencies` | Use the package manager; never hand-edit the manifest. |
 | [domain-modelling](skills/domain-modelling) | `domain-modelling:domain-modelling` | The language, aggregates as consistency boundaries, entities and values, illegal states, where behaviour lives, persistence. |
 | [fix-the-assumption-not-the-hack](skills/fix-the-assumption-not-the-hack) | `fix-the-assumption-not-the-hack:fix-the-assumption-not-the-hack` | When a feature invalidates an assumption the design rests on, rethink the pattern rather than land a tweak. |
 | [idiomatic-by-default](skills/idiomatic-by-default) | `idiomatic-by-default:idiomatic-by-default` | Take the ecosystem's standard path unless there's an articulable reason not to. |
+| [illegal-states-unrepresentable](plugins/illegal-states-unrepresentable) | `illegal-states-unrepresentable:illegal-states-unrepresentable` | Model data so invalid combinations cannot be constructed; parse loose external shapes into precise variants at the boundary. |
 | [layering](skills/layering) | `layering:layering` | Which way dependencies point, what each layer owns, what may cross a boundary, ports and adapters. |
 | [modular-and-layered-code](skills/modular-and-layered-code) | `modular-and-layered-code:modular-and-layered-code` | Architect so a future agent can act at a single layer — strict tested contracts, pure logic, impurity at the edges. |
 | [push-back-and-verify-assumptions](skills/push-back-and-verify-assumptions) | `push-back-and-verify-assumptions:push-back-and-verify-assumptions` | Push back on wrong premises, state assumptions explicitly, and stop rather than build something plausibly correct. |

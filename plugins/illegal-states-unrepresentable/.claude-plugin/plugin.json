@@ -1,0 +1,4 @@
+{
+  "name": "illegal-states-unrepresentable",
+  "description": "Model data so invalid combinations cannot be constructed — use variants, precise values and boundary parsing instead of optionals plus runtime assertions"
+}

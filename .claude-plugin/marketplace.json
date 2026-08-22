@@ -36,6 +36,12 @@
       "description": "Take the ecosystem's standard path unless there is an articulable reason not to, and don't escalate decisions an idiom already answers"
     },
     {
+      "name": "illegal-states-unrepresentable",
+      "source": "./plugins/illegal-states-unrepresentable",
+      "version": "1.0.0",
+      "description": "Model data so invalid combinations cannot be constructed — use variants, precise values and boundary parsing instead of optionals plus runtime assertions"
+    },
+    {
       "name": "layering",
       "source": "./plugins/layering",
       "version": "1.0.0",

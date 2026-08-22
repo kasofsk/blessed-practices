@@ -1,4 +1,0 @@
-{
-  "name": "fix-the-assumption-not-the-hack",
-  "description": "When a feature invalidates an assumption the design rests on, rethink the pattern instead of landing a tweaky hack"
-}

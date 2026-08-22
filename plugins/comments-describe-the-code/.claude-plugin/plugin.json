@@ -1,4 +1,0 @@
-{
-  "name": "comments-describe-the-code",
-  "description": "Comments describe the code itself, not the prompt or conversation that produced it \u2014 and a long justifying comment is a code smell pointing at the code"
-}

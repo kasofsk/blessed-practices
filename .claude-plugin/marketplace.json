@@ -24,6 +24,24 @@
       ]
     },
     {
+      "name": "diminishing-returns",
+      "source": "./",
+      "version": "1.0.0",
+      "description": "Pursue the highest-value work first and stop when the expected value of the next improvement no longer justifies its full cost",
+      "skills": [
+        "./skills/diminishing-returns"
+      ]
+    },
+    {
+      "name": "design-with-known-limits",
+      "source": "./",
+      "version": "1.0.0",
+      "description": "Design systems with explicit correctness limits, failure modes, and operational assumptions instead of automatically engineering every weakness away",
+      "skills": [
+        "./skills/design-with-known-limits"
+      ]
+    },
+    {
       "name": "domain-modelling",
       "source": "./",
       "version": "1.0.0",

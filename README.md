@@ -47,6 +47,7 @@ frontmatter. No Codex-specific copy of the practice is required.
 |--------|-------|----------|
 | [comments-describe-the-code](skills/comments-describe-the-code) | `comments-describe-the-code:comments-describe-the-code` | Comments describe the code itself, not the prompt or conversation that produced it — and a long justifying comment is a smell pointing at the code. |
 | [dependencies](skills/dependencies) | `dependencies:dependencies` | Use the package manager; never hand-edit the manifest. |
+| [design-with-known-limits](skills/design-with-known-limits) | `design-with-known-limits:design-with-known-limits` | State the system's correctness envelope, price each mitigation against its lifecycle cost, and let operators deliberately accept known risks. |
 | [domain-modelling](skills/domain-modelling) | `domain-modelling:domain-modelling` | The language, aggregates as consistency boundaries, entities and values, illegal states, where behaviour lives, persistence. |
 | [fix-the-assumption-not-the-hack](skills/fix-the-assumption-not-the-hack) | `fix-the-assumption-not-the-hack:fix-the-assumption-not-the-hack` | When a feature invalidates an assumption the design rests on, rethink the pattern rather than land a tweak. |
 | [idiomatic-by-default](skills/idiomatic-by-default) | `idiomatic-by-default:idiomatic-by-default` | Take the ecosystem's standard path unless there's an articulable reason not to. |

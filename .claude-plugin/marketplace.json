@@ -6,15 +6,6 @@
   },
   "plugins": [
     {
-      "name": "80-20-rule",
-      "source": "./",
-      "version": "1.0.0",
-      "description": "Pursue the small set of work that captures most of the practical value, and stop when additional effort reaches diminishing returns",
-      "skills": [
-        "./skills/80-20-rule"
-      ]
-    },
-    {
       "name": "comments-describe-the-code",
       "source": "./",
       "version": "1.0.0",
@@ -30,6 +21,15 @@
       "description": "Manage dependencies with the ecosystem's package manager; never hand-edit the manifest",
       "skills": [
         "./skills/dependencies"
+      ]
+    },
+    {
+      "name": "diminishing-returns",
+      "source": "./",
+      "version": "1.0.0",
+      "description": "Pursue the highest-value work first and stop when the expected value of the next improvement no longer justifies its full cost",
+      "skills": [
+        "./skills/diminishing-returns"
       ]
     },
     {

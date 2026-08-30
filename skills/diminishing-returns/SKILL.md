@@ -11,10 +11,6 @@ Pursue the highest-value work first. Unless the operator explicitly asks for a
 more complete, optimized, or exhaustive result, stop when the expected value of
 the next improvement no longer justifies its full cost.
 
-Judge each increment by the outcome it advances, not by how close it moves the
-solution toward theoretical completeness. The goal is a deliberately sufficient
-solution, not a predetermined ratio of effort to value.
-
 ## Find the value-dense path
 
 Before expanding the solution, identify the outcome that matters and the

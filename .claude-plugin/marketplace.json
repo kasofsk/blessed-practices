@@ -24,6 +24,15 @@
       ]
     },
     {
+      "name": "diminishing-returns",
+      "source": "./",
+      "version": "1.0.0",
+      "description": "Pursue the highest-value work first and stop when the expected value of the next improvement no longer justifies its full cost",
+      "skills": [
+        "./skills/diminishing-returns"
+      ]
+    },
+    {
       "name": "design-with-known-limits",
       "source": "./",
       "version": "1.0.0",

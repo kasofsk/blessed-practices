@@ -70,9 +70,12 @@
     },
     {
       "name": "illegal-states-unrepresentable",
-      "source": "./plugins/illegal-states-unrepresentable",
+      "source": "./",
       "version": "1.0.0",
-      "description": "Model data so invalid combinations cannot be constructed — use variants, precise values and boundary parsing instead of optionals plus runtime assertions"
+      "description": "Model data so invalid combinations cannot be constructed — use variants, precise values and boundary parsing instead of optionals plus runtime assertions",
+      "skills": [
+        "./skills/illegal-states-unrepresentable"
+      ]
     },
     {
       "name": "layering",
